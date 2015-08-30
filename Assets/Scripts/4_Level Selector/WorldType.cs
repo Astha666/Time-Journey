@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-public enum Worlds 
+public enum WorldType 
 {
 	PRIMEVAL,
 	ANCIENT,

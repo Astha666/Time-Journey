@@ -9,12 +9,12 @@ public class LevelWorldButtons : MonoBehaviour
 	public Sprite image;
 
 	private Canvas canvas;
-	private List<Worlds> allWorlds;
+	private List<WorldType> allWorlds;
 
 	void Awake() 
 	{
 		canvas = GetComponentInChildren<Canvas>();
-		allWorlds = GameTools.EnumToList<Worlds>();
+		allWorlds = GameTools.EnumToList<WorldType>();
 
 		GridLayoutGroup canvasLayout = canvas.gameObject.AddComponent<GridLayoutGroup>();
 		canvasLayout.cellSize = new Vector2(500, 200);
@@ -24,14 +24,14 @@ public class LevelWorldButtons : MonoBehaviour
 
 	void Start()
 	{
-		foreach(Worlds world in allWorlds)
+		foreach(WorldType world in allWorlds)
 		{
 			int ID = allWorlds.IndexOf(world);
 			CreateWorldSelectButtons(world, ID);
 		}
 	}
 
-	void CreateWorldSelectButtons(Worlds world, int ID)
+	void CreateWorldSelectButtons(WorldType world, int ID)
 	{
 		string worldName = world.ToString().Replace("_", " ");
 

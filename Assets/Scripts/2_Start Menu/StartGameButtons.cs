@@ -5,7 +5,7 @@ public class StartGameButtons : MonoBehaviour
 {
 	public string mainMenuScene;
 	public string newGameScene;
-	private SaveGameManager manager;
+	public string levelSelectorScene;
 	
 	public void NewGame()
 	{
@@ -14,7 +14,7 @@ public class StartGameButtons : MonoBehaviour
 	
 	public void LoadGame()
 	{
-		manager = gameObject.AddComponent<SaveGameManager>();
+		gameObject.AddComponent<SaveGameManager>().levelSelectorScene = levelSelectorScene;
 	}
 	
 	public void Return()

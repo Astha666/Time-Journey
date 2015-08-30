@@ -1387,6 +1387,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mainMenuScene: 0_Main Menu
   newGameScene: 1_New Game
+  levelSelectorScene: 0_Level World Selector
 --- !u!212 &1819692670
 SpriteRenderer:
   m_ObjectHideFlags: 0

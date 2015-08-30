@@ -49,10 +49,11 @@ public class NewGameButtons : MonoBehaviour
 		string saveGameName = playerName;
 		string saveGameFileName = directory + playerName + ".xml";
 		string saveGameDirectory = directory + playerName + "/";
-
-		Debug.Log ("NAM: " + saveGameName);
-		Debug.Log ("FIL: " + saveGameFileName);
-		Debug.Log ("DIR: " + saveGameDirectory);
+		
+		XmlSerializer serializer = new XmlSerializer(typeof(string), new XmlRootAttribute(playerName));
+		FileStream stream = new FileStream(saveGameFileName, FileMode.Create);
+		serializer.Serialize(stream, playerName);
+		stream.Close();
 
 		GameManager.actualSaveGame = new SaveGame(saveGameName, saveGameFileName, saveGameDirectory);
 	}

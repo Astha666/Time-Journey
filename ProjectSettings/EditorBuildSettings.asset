@@ -15,3 +15,5 @@ EditorBuildSettings:
     path: Assets/Scenes/2_Start Menu/1_New Game.unity
   - enabled: 1
     path: Assets/Scenes/3_Game Intro/0_Game Intro.unity
+  - enabled: 1
+    path: Assets/Scenes/4_Level Selector/0_Level World Selector.unity

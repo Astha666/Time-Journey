@@ -10,6 +10,7 @@ using System.Collections.Generic;
 public class SaveGameManager : MonoBehaviour 
 {
 	public List<SaveGame> saveGames;
+	public string levelSelectorScene;
 	public string directory;
 
 	private Canvas canvas;
@@ -22,7 +23,7 @@ public class SaveGameManager : MonoBehaviour
 		saveGames = new List<SaveGame>();
 		canvas = GetComponentInChildren<Canvas>();
 		image = canvas.GetComponentInChildren<Image>().sprite;
-		buttonSpace = 100;
+		buttonSpace = 8;
 
 		if(!Directory.Exists(Application.dataPath + directory))
 		{
@@ -58,7 +59,7 @@ public class SaveGameManager : MonoBehaviour
 		loadSaveGameTextObject.transform.SetParent(loadSaveGameButtonObject.transform);
 		loadSaveGameTextObject.GetComponent<RectTransform>().localPosition = new Vector2(0.0f, -6.5f);
 
-		loadSaveGameButtonObject.GetComponent<RectTransform>().anchoredPosition = new Vector2(450, ((ID * buttonSpace) + (buttonSpace / 2)) - ((saveGames.Count * buttonSpace) / 2) - 50);
+		loadSaveGameButtonObject.GetComponent<RectTransform>().anchoredPosition = new Vector2(450, (ID * (150 + buttonSpace)) - 362);
 		loadSaveGameButtonObject.GetComponent<RectTransform>().anchorMin = new Vector2(0.5f, 0.5f);
 		loadSaveGameButtonObject.GetComponent<RectTransform>().anchorMax = new Vector2(0.5f, 0.5f);
 
@@ -81,8 +82,11 @@ public class SaveGameManager : MonoBehaviour
 		loadSaveGameButtonObject.layer = LayerMask.NameToLayer("UI");
 		loadSaveGameTextObject.layer = LayerMask.NameToLayer("UI");
 
+		loadButton.targetGraphic = loadButton.GetComponent<Image>();
+		loadButton.colors = GameManager.colorBlock;
 		loadButton.onClick.AddListener(delegate {LoadSaveGame(saveGame);});
 
+		// **********************************************************************************************
 
 		GameObject deleteSaveGameButtonObject = new GameObject("Delete " + saveGame.SaveGameName);
 		Button deleteButton = deleteSaveGameButtonObject.AddComponent<Button>();
@@ -99,7 +103,7 @@ public class SaveGameManager : MonoBehaviour
 		deleteSaveGameTextObject.transform.SetParent(deleteSaveGameButtonObject.transform);
 		deleteSaveGameTextObject.GetComponent<RectTransform>().localPosition = new Vector2(0.0f, -6.5f);
 
-		deleteSaveGameButtonObject.GetComponent<RectTransform>().anchoredPosition = new Vector2(800, ((ID * buttonSpace) + (buttonSpace / 2)) - ((saveGames.Count * buttonSpace) / 2) - 50);
+		deleteSaveGameButtonObject.GetComponent<RectTransform>().anchoredPosition = new Vector2(800, (ID * (150 + buttonSpace)) - 362);
 		deleteSaveGameButtonObject.GetComponent<RectTransform>().anchorMin = new Vector2(0.5f, 0.5f);
 		deleteSaveGameButtonObject.GetComponent<RectTransform>().anchorMax = new Vector2(0.5f, 0.5f);
 
@@ -123,18 +127,16 @@ public class SaveGameManager : MonoBehaviour
 		deleteSaveGameTextObject.layer = LayerMask.NameToLayer("UI");
 
 		deleteSaveGameButtonObject.transform.SetParent(loadSaveGameButtonObject.transform);
-		
+
+		deleteButton.targetGraphic = deleteButton.GetComponent<Image>();
+		deleteButton.colors = GameManager.colorBlock;
 		deleteButton.onClick.AddListener(delegate {DeleteSaveGame(saveGame, loadSaveGameButtonObject);});
 	}
 
 	void LoadSaveGame(SaveGame saveGame)
 	{
-
-		Debug.Log ("NAM: " + saveGame.SaveGameName);
-		Debug.Log ("FIL: " + saveGame.SaveGameFileName);
-		Debug.Log ("DIR: " + saveGame.SaveGameDirectory);
-
 		GameManager.actualSaveGame = saveGame;
+		Application.LoadLevel(levelSelectorScene);
 	}
 
 	void DeleteSaveGame(SaveGame saveGame, GameObject button)

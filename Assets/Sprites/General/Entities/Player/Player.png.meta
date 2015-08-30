@@ -1,0 +1,231 @@
+fileFormatVersion: 2
+guid: a9c37b9ff32695a48b0962fc7ad9e3f9
+timeCreated: 1440102551
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: PlayerHair
+    21300002: PlayerEyeBrowLeft
+    21300004: PlayerHead
+    21300006: PlayerEyeBrowRight
+    21300008: PlayerEyePupilLeft
+    21300010: PlayerEyeLeft
+    21300012: PlayerEyeRight
+    21300014: PlayerEyePupilRight
+    21300016: PlayerHandLeft
+    21300018: PlayerArmLeft
+    21300020: PlayerArmRight
+    21300022: PlayerHandRight
+    21300024: PlayerBody
+    21300026: PlayerBeard
+    21300028: PlayerLegLeft
+    21300030: PlayerLegRight
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 1024
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 400
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: PlayerHair
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 1183
+        width: 394
+        height: 253
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayerEyeBrowLeft
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 940
+        width: 87
+        height: 35
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayerHead
+      rect:
+        serializedVersion: 2
+        x: 336
+        y: 682
+        width: 297
+        height: 340
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayerEyeBrowRight
+      rect:
+        serializedVersion: 2
+        x: 737
+        y: 940
+        width: 67
+        height: 35
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayerEyePupilLeft
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 822
+        width: 35
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayerEyeLeft
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 789
+        width: 104
+        height: 97
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayerEyeRight
+      rect:
+        serializedVersion: 2
+        x: 730
+        y: 790
+        width: 80
+        height: 96
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayerEyePupilRight
+      rect:
+        serializedVersion: 2
+        x: 867
+        y: 822
+        width: 27
+        height: 31
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayerHandLeft
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 531
+        width: 95
+        height: 91
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayerArmLeft
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 581
+        width: 103
+        height: 130
+      alignment: 9
+      pivot: {x: .800000012, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayerArmRight
+      rect:
+        serializedVersion: 2
+        x: 734
+        y: 581
+        width: 101
+        height: 130
+      alignment: 9
+      pivot: {x: .180000007, y: .800000012}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayerHandRight
+      rect:
+        serializedVersion: 2
+        x: 884
+        y: 531
+        width: 95
+        height: 91
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayerBody
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 277
+        width: 202
+        height: 223
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayerBeard
+      rect:
+        serializedVersion: 2
+        x: 499
+        y: 287
+        width: 248
+        height: 157
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayerLegLeft
+      rect:
+        serializedVersion: 2
+        x: 263
+        y: 0
+        width: 153
+        height: 133
+      alignment: 9
+      pivot: {x: .5, y: 1.39999998}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: PlayerLegRight
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 0
+        width: 152
+        height: 133
+      alignment: 9
+      pivot: {x: .25, y: 1.41276181}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: Player
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

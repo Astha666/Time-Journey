@@ -83,6 +83,13 @@ public class LevelWorldButtons : MonoBehaviour
 
 	void GoToWorld(World world)
 	{
+		/*
+		if(Player has finished the world before)
+		{
+			Application.LoadLevel(world.LevelSelectorScene);
+		}
+		*/
+
 		Application.LoadLevel(world.LevelSelectorScene);
 	}
 }

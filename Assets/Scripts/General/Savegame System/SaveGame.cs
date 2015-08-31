@@ -6,9 +6,13 @@ using System.Collections;
 
 public class SaveGame
 {
+	private string playerName;
 	private string saveGameName;
 	private string saveGameFileName;
 	private string saveGameDirectory;
+
+	private string[] itemInventory;
+	private string[] equipInventory;
 
 	public SaveGame(string saveGameName, string saveGameFileName, string saveGameDirectory)
 	{
@@ -22,6 +26,12 @@ public class SaveGame
 
 	}
 
+	public void Save()
+	{
+		
+	}
+	
+	public string PlayerName{get{return playerName;}}
 	public string SaveGameName{get{return saveGameName;}}
 	public string SaveGameFileName{get{return saveGameFileName;}}
 	public string SaveGameDirectory{get{return saveGameDirectory;}}

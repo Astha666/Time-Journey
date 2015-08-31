@@ -86,7 +86,7 @@ public class SaveGameManager : MonoBehaviour
 		loadButton.colors = GameManager.colorBlock;
 		loadButton.onClick.AddListener(delegate {LoadSaveGame(saveGame);});
 
-		// **********************************************************************************************
+		// *********************************************************************************************************************************************************
 
 		GameObject deleteSaveGameButtonObject = new GameObject("Delete " + saveGame.SaveGameName);
 		Button deleteButton = deleteSaveGameButtonObject.AddComponent<Button>();

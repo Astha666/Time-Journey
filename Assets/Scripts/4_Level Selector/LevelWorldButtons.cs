@@ -31,9 +31,9 @@ public class LevelWorldButtons : MonoBehaviour
 		}
 	}
 
-	void CreateWorldSelectButtons(WorldType world, int ID)
+	void CreateWorldSelectButtons(WorldType worldType, int ID)
 	{
-		string worldName = world.ToString().Replace("_", " ");
+		string worldName = worldType.ToString().Replace("_", " ");
 
 		GameObject worldButtonObject = new GameObject("Button " + worldName);
 		Button worldButton = worldButtonObject.AddComponent<Button>();
@@ -74,17 +74,15 @@ public class LevelWorldButtons : MonoBehaviour
 
 		worldButton.targetGraphic = worldButton.GetComponent<Image>();
 		worldButton.colors = GameManager.colorBlock;
-		worldButton.onClick.AddListener(delegate {GoToWorld(worldName);});
+
+		World thisWorld = new World(ID + 1 + "_" + worldName + " Level Selector", worldType, 10);
+		GameManager.allWorlds.Add(thisWorld);
+
+		worldButton.onClick.AddListener(delegate {GoToWorld(thisWorld);});
 	}
 
-	void GoToWorld(string worldName)
+	void GoToWorld(World world)
 	{
-
-		//****************************************************************************
-
-		// LOAD WORLD
-
-		//****************************************************************************
-
+		Application.LoadLevel(world.LevelSelectorScene);
 	}
 }
